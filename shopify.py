@@ -32,7 +32,7 @@ class ShopifyProduct(product.Product):# Factory
             self.variants.append(self.build_variant(variant))
 
     def build_variant(self, variant: dict) -> option.Option:
-        option_object = option.ShopifyOption()
+        option_object = ShopifyOption()
         option_object.set_data(variant)
         option_object.set_featured_image(self.uuid)
         option_object.build()
